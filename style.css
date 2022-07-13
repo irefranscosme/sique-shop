@@ -1,0 +1,669 @@
+:root {
+  --clr-accent-300: hsla(69, 52%, 66%, 0.8);
+  /* --clr-accent-300: goldenrod; */
+  --clr-accent-200: hsl(70, 37%, 56%);
+  --clr-accent-100: hsl(70, 37%, 80%);
+
+  --clr-primary-400: hsl(70, 23%, 20%);
+  --clr-primary-300: hsl(70, 23%, 40%);
+
+  --clr-neutral-500: hsl(0, 0%, 0%);
+  --clr-neutral-400: hsla(0, 0%, 0%, 0.5);
+  --clr-neutral-200: hsl(0, 100%, 100%);
+  --clr-neutral-100: hsl(0, 0%, 80%);
+  --clr-neutral-50: hsla(0, 0%, 100%, 0.5);
+
+  --btn-slide: var(--clr-neutral-100);
+  ---slider-pagination: var(--clr-accent-300);
+
+  --ff-primary: 'Inter', sans-serif;
+
+  --ff-body: var(--ff-primary);
+  --ff-heading: var(--ff-primary);
+
+  --fw-regular: 400;
+  --fw-semi-bold: 500;
+  --fw-bold: 700;
+
+  /* 16px */
+  --fs-400: 1rem;
+  /* 18px */
+  --fs-450: 1.125rem;
+  /* 20px */
+  --fs-500: 1.25rem;
+  /*  24px*/
+  --fs-525: 1.5rem;
+  /* 32px */
+  --fs-550: 2rem;
+  /* 36px */
+  --fs-600: 2.25rem;
+  /* 48px */
+  --fs-700: 3rem;
+  /* 64px */
+  --fs-800: 4rem;
+
+  --fs-body: var(--fs-400);
+  --fs-nav-title: var(--fs-550);
+  --fs-nav: var(--fs-500);
+  --fs-main-title: var(--fs-600);
+  --fs-main-subtitle: var(--fs-500);
+  --fs-title: var(--fs-600);
+  --fs-subtitle: var(--fs-500);
+
+  --fs-btn-cart: var(--fs-400);
+  --fs-btn-submit: var(--fs-500);
+
+}
+
+
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: var(--ff-body);
+
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  color: var(--clr-neutral-200);
+}
+
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  width: 100%;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Remove text decoration and underline on links */
+li,
+a {
+  text-decoration: none;
+  list-style: none;
+  color: var(--clr-neutral-200);
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+
+/* Utility Classes */
+.text-accent-300 {
+  color: var(--clr-accent-300);
+}
+
+.text-accent-200 {
+  color: var(--clr-accent-200);
+}
+
+.text-accent-100 {
+  color: var(--clr-accent-100);
+}
+
+.text-primary-400 {
+  color: var(--clr-primary-400);
+}
+
+.text-primary-300 {
+  color: var(--clr-primary-300);
+}
+
+.text-neutral-500 {
+  color: var(--clr-neutral-500);
+}
+
+.text-neutral-400 {
+  color: var(--clr-neutral-400);
+}
+
+.text-neutral-200 {
+  color: var(--clr-neutral-200);
+}
+
+.text-neutral-100 {
+  color: var(--clr-neutral-100);
+}
+
+.text-neutral-50 {
+  color: var(--clr-neutral-50);
+}
+
+
+.bg-accent-300 {
+  background-color: var(--clr-accent-300);
+}
+
+.bg-accent-200 {
+  background-color: var(--clr-accent-200);
+}
+
+.bg-accent-100 {
+  background-color: var(--clr-accent-100);
+}
+
+.bg-primary-400 {
+  background-color: var(--clr-primary-400);
+}
+
+.bg-primary-300 {
+  background-color: var(--clr-primary-300);
+}
+
+.bg-neutral-500 {
+  background-color: var(--clr-neutral-500);
+}
+
+.bg-neutral-200 {
+  background-color: var(--clr-neutral-200);
+}
+
+.bg-neutral-100 {
+  background-color: var(--clr-neutral-100);
+}
+
+.bg-neutral-50 {
+  color: var(--clr-neutral-50);
+}
+
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+
+.fw-semi-bold {
+  font-weight: var(--fw-semi-bold);
+}
+
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+
+.main-title {
+  font-size: var(--fs-main-title);
+}
+
+.main-subtitle {
+  font-size: var(--fs-main-subtitle)
+}
+
+.title {
+  font-size: var(--fs-title);
+}
+
+.subtitle {
+  font-size: var(--fs-subtitle);
+}
+
+.fs-nav-title {
+  font-size: var(--fs-nav-title)
+}
+
+.fs-nav-links {
+  font-size: var(--fs-nav);
+}
+
+.fs-btn-cart {
+  font-size: var(--fs-btn-cart);
+}
+
+.fs-btn-submit {
+  font-size: var(--fs-btn-submit);
+}
+
+.flex {
+  display: flex;
+}
+
+
+.container {
+  /* grid-template-columns: repeat(12, 1fr); */
+  width: 100%;
+}
+
+.header {
+  /* background-color: red; */
+  position: relative;
+  width: 100%;
+  /* min-height: 50vh; */
+}
+
+
+
+.swiper {
+  width: 100%;
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  height: 400px;
+}
+
+
+.swiper-wrapper {}
+
+.swiper-slide {
+  /* width: 100%; */
+}
+
+.swiper-slide .swiper-img {
+  object-fit: cover;
+  object-position: (90%, 30%);
+  height: 400px;
+}
+
+
+
+.swiper-scrollbar {
+  display: none;
+}
+
+.swiper-pagination-bullet {
+  padding: 0.5rem;
+}
+
+.swiper .swiper-button-next,
+.swiper .swiper-button-prev {
+  fill: var(--btn-slide);
+  width: 1.5rem;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper-button-next {
+  margin-right: 2rem;
+
+}
+
+.swiper-button-prev {
+  margin-left: 2rem;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  background: var(--clr-accent-300);
+
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  background: var(--clr-accent-300);
+}
+
+
+
+.header-section {
+  z-index: 2;
+  position: absolute;
+  pointer-events: none;
+  width: 100%;
+}
+
+.header-section-con {
+  /* max-width: clamp(20em, 50vw + 1rem,45em); */
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-items: center;
+  padding: 0px 10%;
+  gap: 2rem;
+  height: 100%;
+}
+
+.header-section .main-title,
+.header-section .main-subtitle {
+  text-shadow: 2px 0px 10px var(--clr-neutral-400)
+}
+
+.header-section-con .header-logo {
+  width: clamp(8em, 10vw, 10em);
+}
+
+.header-section .header-logo img {
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+/* navigation */
+
+.nav {
+  padding-left: 10%;
+  padding-right: 10%;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+
+}
+
+.search {
+  align-items: center;
+  border-radius: 1.2rem;
+  padding: 0.50rem;
+  gap: 0.5rem;
+  background-color: var(--clr-neutral-50);
+  flex-direction: row-reverse;
+}
+
+.search-svg {
+  width: 1.2rem;
+  fill: var(--clr-neutral-500);
+  opacity: 0.4;
+}
+
+.search input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  caret-color: var(--clr-neutral-200);
+  color: var(--clr-neutral-200);
+}
+
+.search input::placeholder {
+  opacity: 0.4;
+  color: var(--clr-neutral-500);
+  font-weight: var(--fw-regular);
+}
+
+.nav-list {
+  cursor: pointer;
+  height: 100%;
+  position: relative;
+
+}
+
+.nav-item {
+  padding-block: 0.5rem;
+  width: 4.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+.nav-item svg {
+  fill: var(--clr-neutral-200);
+  width: 2rem;
+}
+
+.nav-item.nav-item.signup.active a {
+  color: var(--clr-neutral-200);
+}
+
+.nav-item.signup.active~.nav-indicatior {
+  display: none;
+
+}
+
+.nav-item.cart {
+  width: 2.5em;
+}
+
+.nav-item.cart.active~.nav-indicatior {
+  display: none;
+}
+
+.nav-item.signup a {
+  background-color: var(--clr-primary-400);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.nav-item.active a {
+  color: var(--clr-primary-400);
+}
+
+.nav-indicatior {
+  position: absolute;
+  bottom: 0;
+  background-color: var(--clr-primary-400);
+  z-index: -1;
+  height: 3px;
+  width: 5em;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.nav-item:nth-child(1).active~.nav-indicatior {
+  transform: translateX(calc(5em * 0));
+}
+
+.nav-item:nth-child(2).active~.nav-indicatior {
+  transform: translateX(calc(5em * 1));
+}
+
+.nav-item:nth-child(3).active~.nav-indicatior {
+  transform: translateX(calc(5em * 2));
+}
+
+.nav-item:nth-child(4).active~.nav-indicatior {
+  transform: translateX(calc(5em * 3));
+}
+
+.nav-item:nth-child(5).active~.nav-indicatior {
+  transform: translateX(calc(5em * 4));
+}
+
+.nav-menu {
+  padding: 1rem;
+
+
+}
+
+.products {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-block: clamp(1rem, 12vw + 1rem, 3rem);
+  text-align: center;
+}
+
+.product-list {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.product-list li {}
+
+.product-list li .img-resize {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  margin-top: 1rem;
+}
+
+.product-list li button {}
+
+.product-list li:nth-child(1) .img-resize {
+  /* object-fit: scale-down; */
+  object-position: 0% 80%;
+}
+
+
+.product-list li button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.product-list li p {
+  margin-top: -1rem;
+}
+
+.product-list li button {
+  margin-top: 1rem;
+}
+
+.product-list .product-title p {
+  margin-top: 0.20rem;
+}
+
+/* footer */
+.footer {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  width: 100%;
+  background-color: var(--clr-primary-400);
+  justify-content: space-between;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-block: clamp(1rem, 12vw + 1rem, 3rem);
+
+}
+
+.con {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.con p {
+  margin-top: -1rem;
+}
+
+.contact-form .form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form label input {
+  border-radius: 0.25rem;
+  outline: none;
+  border: none;
+  padding: 0.5rem;
+  width: 80%;
+}
+
+.contact-form label:last-of-type input {
+  padding: 5rem 0.5rem;
+  text-align: left;
+  position: relative;
+}
+
+.contact-form label:last-of-type input::placeholder {
+  position: absolute;
+  top: 0.5rem;
+}
+
+.shop-contact {
+  position: relative;
+}
+
+.shop-logo {
+  position: absolute;
+  width: 5em;
+  /* top: -0.20rem;
+  left: -5.5rem; */
+  top: 0;
+  right: 0;
+}
+
+.nav-menu {
+  display: none;
+  width: 4rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .nav h1 {
+    display: none;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  .nav-menu {
+    display: block;
+    fill: var(--clr-neutral-200);
+  }
+
+  .header-section-con {
+    text-align: center;
+    padding-top: 2rem;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  :root {
+    --fs-main-subtitle: var(--fs-400);
+  }
+
+  .product-list {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .footer {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .footer {
+    text-align: center;
+  }
+
+  .shop-logo {
+    position: relative;
+    margin: auto;
+  }
+
+
+
+}
